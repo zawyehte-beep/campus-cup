@@ -1,0 +1,37 @@
+:root {
+  --ink: #242d25;
+  --green: #285741;
+  --paper: #fffbf2;
+  --line: #e3d8c5;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.55 system-ui, sans-serif; }
+.bar, main, footer { width: min(1100px, 92%); margin: auto; }
+.bar { min-height: 72px; display: flex; justify-content: space-between; align-items: center; gap: 12px; border-bottom: 1px solid var(--line); }
+a { color: var(--green); }
+a:focus-visible { outline: 3px solid #c66a22; outline-offset: 4px; }
+.brand { font-weight: 800; font-size: 1.25rem; text-decoration: none; }
+nav { display: flex; gap: 18px; }
+nav a { text-decoration: none; font-weight: 650; }
+nav a:hover { text-decoration: underline; }
+.hero { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 36px; padding: 36px 0; }
+.hero img { width: 100%; height: auto; border-radius: 20px; display: block; }
+.label { color: var(--green); font-size: .76rem; font-weight: 800; letter-spacing: .12em; margin: 0 0 9px; }
+h1, h2, h3 { line-height: 1.1; margin: 0; }
+h1 { font: bold clamp(2.3rem, 5vw, 4.35rem)/1 Georgia, serif; }
+h2 { font: bold clamp(1.75rem, 4vw, 2.6rem)/1.1 Georgia, serif; }
+p { max-width: 60ch; }
+.button { background: var(--green); color: white; padding: 10px 16px; display: inline-block; text-decoration: none; border-radius: 7px; font-weight: 700; }
+.section { padding: 28px 0; border-top: 1px solid var(--line); }
+.items { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 18px; }
+article { background: white; border: 1px solid var(--line); border-radius: 11px; padding: 18px; }
+article p { margin: 9px 0; }
+article strong { color: var(--green); font-size: 1.2rem; }
+.pickup { margin-top: 8px; padding: 23px; border: 0; background: #e9efdf; border-radius: 11px; }
+footer { padding: 25px 0; color: #4d5b50; font-size: .9rem; }
+@media (max-width: 650px) {
+  .bar { min-height: 60px; }
+  nav { gap: 10px; font-size: .875rem; }
+  .hero, .items { grid-template-columns: 1fr; }
+  .hero { gap: 20px; padding: 26px 0; }
+}
